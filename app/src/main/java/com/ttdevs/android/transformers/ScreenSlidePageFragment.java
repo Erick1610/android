@@ -15,19 +15,18 @@ import com.ttdevs.android.R;
 import java.util.Random;
 
 /**
- * Created by ttdevs on 16/12/2017.
+ * @author ttdevs
  */
-
 public class ScreenSlidePageFragment extends Fragment {
     private static final String ARG_INDEX = "key_index";
 
     private int mIndex;
 
     private static final int[] COLORS = new int[]{Color.BLUE, Color.RED,
-            Color.GRAY, Color.GREEN, Color.YELLOW, Color.CYAN};
+            Color.GRAY, Color.GREEN, Color.YELLOW, Color.CYAN, Color.BLACK, Color.MAGENTA};
     private Random mRandom = new Random();
 
-    public static ScreenSlidePageFragment getInstance(int index){
+    public static ScreenSlidePageFragment getInstance(int index) {
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_INDEX, index);

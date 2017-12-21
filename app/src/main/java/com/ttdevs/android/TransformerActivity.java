@@ -9,6 +9,9 @@ import android.support.v4.view.ViewPager;
 import com.ttdevs.android.transformers.CoverModeTransformer;
 import com.ttdevs.android.transformers.ScreenSlidePageFragment;
 
+/**
+ * @author ttdevs
+ */
 public class TransformerActivity extends BaseActivity {
 
     private ViewPager vpContent;
@@ -23,13 +26,7 @@ public class TransformerActivity extends BaseActivity {
         mAdapter = new FragmentAdapter(getSupportFragmentManager());
         vpContent.setAdapter(mAdapter);
         vpContent.setOffscreenPageLimit(4);
-//        vpContent.setPageTransformer(true, new ZoomOutPageTransformer());
-//        vpContent.setPageTransformer(true, new DepthPageTransformer());
-//        vpContent.setPageTransformer(true, new MyPageTransform());
-//        vpContent.setPageTransformer(false, new ScaleYTransformer());
         vpContent.setPageTransformer(true, new CoverModeTransformer(vpContent));
-//        vpContent.setPageTransformer(true, new RotatePageTransformer());
-//        vpContent.setPageTransformer(true, new SelfTransformer());
     }
 
     class FragmentAdapter extends FragmentPagerAdapter {
@@ -45,7 +42,7 @@ public class TransformerActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            return 10;
+            return 8;
         }
     }
 }
