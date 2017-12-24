@@ -78,6 +78,7 @@ dependencies {
     compile project(':modules:indicator')
     compile project(':modules:dagger')
     compile project(':modules:hybrid')
+    compile project(':modules:gallery')
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

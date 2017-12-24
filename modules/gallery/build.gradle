@@ -27,4 +27,5 @@ dependencies {
 
     testImplementation libs.junit
     implementation support.appcompat_v7
+    implementation support.recyclerview_v7
 }

@@ -1,8 +1,10 @@
 package com.ttdevs.android;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
+import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.ttdevs.gallery.CardScaleHelper;
 
 public class GalleryActivity extends BaseActivity {
 
@@ -33,6 +36,10 @@ public class GalleryActivity extends BaseActivity {
         rvSnapHelper.setLayoutManager(manager);
         rvSnapHelper.setAdapter(mAdapter);
         new LinearSnapHelper().attachToRecyclerView(rvSnapHelper);
+//        new PagerSnapHelper().attachToRecyclerView(rvSnapHelper);
+//        CardScaleHelper mCardScaleHelper = new CardScaleHelper();
+//        mCardScaleHelper.setCurrentItemPos(2);
+//        mCardScaleHelper.attachToRecyclerView(rvSnapHelper);
     }
 
     class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
@@ -56,6 +63,7 @@ public class GalleryActivity extends BaseActivity {
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
             View item = layoutInflater.inflate(R.layout.item_gallery_snap_helper, parent, false);
+            item.getLayoutParams().width = screenWidth(parent.getContext()) - 400;
             return new ViewHolder(item);
         }
 
@@ -68,6 +76,10 @@ public class GalleryActivity extends BaseActivity {
         @Override
         public int getItemCount() {
             return IMAGES.length;
+        }
+
+        public int screenWidth(Context context) {
+            return context.getResources().getDisplayMetrics().widthPixels;
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
