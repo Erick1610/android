@@ -66,6 +66,7 @@ dependencies {
     compile libs.markdownview
     compile libs.java_websocket
     compile libs.guava
+    compile libs.glide
     compile libs.okhttp3ws
 
     compile libs.butterknife

@@ -109,6 +109,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_custom_view:
                 Utils.comeOnBaby(this, CustomViewActivity.class);
                 break;
+            case R.id.nav_gallery:
+                Utils.comeOnBaby(this, GalleryActivity.class);
+                break;
             case R.id.nav_transformer:
                 Utils.comeOnBaby(this, TransformerActivity.class);
                 break;

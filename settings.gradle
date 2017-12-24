@@ -22,4 +22,5 @@ include 'modules:dagger'
 include 'modules:guava'
 include 'modules:hybrid'
 include 'modules:annotations'
+include 'modules:gallery'
 

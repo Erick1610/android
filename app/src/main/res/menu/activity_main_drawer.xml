@@ -37,6 +37,10 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Custom View" />
             <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Gallery" />
+            <item
                 android:id="@+id/nav_transformer"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Transformer" />
